@@ -46,6 +46,9 @@ function Navbar() {
     <li>
       <Link to="/contact">Contacto</Link>
     </li>
+    <li>
+      <Link to="/donations">Donaciones</Link>
+    </li>
   </ul>
 
   {/* Menú hamburguesa */}
