@@ -8,7 +8,7 @@ import Donations from './pages/Donations';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/aevision">
       <div className="flex flex-col min-h-screen bg-gray-50">
         <Navbar />
 
