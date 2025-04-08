@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -10,10 +11,12 @@ function Home() {
       {/* Hero */}
       <section className="home__hero">
         <div className="home__overlay">
-        <div className="home__hero-content">
-        <h1>Bienvenido a un Futuro Ecológico</h1>
+          <div className="home__hero-content">
+            <h1>Bienvenido a un Futuro Ecológico</h1>
             <p>Juntos podemos construir un mundo más sostenible 🌱</p>
-            <button className="home__btn">Saber más</button>
+            <Link to="/dashboards"><button className="home__btn">Descubre nuestro impacto</button></Link>
+            <Link to="/donations"><button className="home__btn">Donaciones</button></Link>
+
           </div>
         </div>
       </section>
@@ -43,13 +46,22 @@ function Home() {
           slidesPerView={1}
         >
           <SwiperSlide>
-            <img src="https://images.unsplash.com/photo-1581091870620-fd1a1d0c9f0e" alt="Reciclaje automatizado 1" />
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/3553/3553549.png"
+              alt="Reciclaje de PET"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://images.unsplash.com/photo-1616627987399-7e94e03267c0" alt="Robots clasificadores" />
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/4022/4022065.png"
+              alt="Reciclaje de Papel/Cartón"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://images.unsplash.com/photo-1508595142481-3b4d57b85452" alt="Centro de reciclaje moderno" />
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2329/2329853.png"
+              alt="Reciclaje de Aluminio"
+            />
           </SwiperSlide>
         </Swiper>
       </section>
@@ -71,10 +83,33 @@ function Home() {
       <section className="home__logos">
         <h2>Trabajando con líderes e innovadores</h2>
         <div className="logos-grid">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Recycle001.svg/512px-Recycle001.svg.png" alt="Aliado 1" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Google_2015_logo.svg/512px-Google_2015_logo.svg.png" alt="Aliado 2" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Logo_UNESCO.svg/512px-Logo_UNESCO.svg.png" alt="Aliado 3" />
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1046/1046755.png"
+            alt="Aliado 1 - Reciclaje"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/4/42/Google_2015_logo.svg"
+            alt="Aliado 2 - Google"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Logo_UNESCO.svg"
+            alt="Aliado 3 - UNESCO"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/5e/World_Wildlife_Fund_logo_2016.svg"
+            alt="Aliado 4 - WWF"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Apple_logo_black.svg"
+            alt="Aliado 5 - Apple"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Nike_logo.svg"
+            alt="Aliado 6 - Nike"
+          />
         </div>
+
+
       </section>
 
       {/* CTA */}

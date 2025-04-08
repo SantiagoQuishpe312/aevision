@@ -5,10 +5,11 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Donations from './pages/Donations';
-
+import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
+import WasteCounter from './pages/WastCounter';
 function App() {
   return (
-    <Router basename="/aevision">
+    <Router>
       <div className="flex flex-col min-h-screen bg-gray-50">
         <Navbar />
 
@@ -18,9 +19,11 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/donations" element={<Donations />} />
+            <Route path="/dashboards" element={<WasteCounter />} />
+
           </Routes>
         </main>
-
+        <FloatingWhatsAppButton />
         <Footer />
       </div>
     </Router>
