@@ -5,8 +5,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Link } from 'react-router-dom';
 import bin from '../assets/img/bin1.png';
-import aiseLogo from '../assets/img/aise_logo-copia.png';
-import asoLogo from '../assets/img/aso_logo.png';
+import aiseLogo from '../assets/img/aise.png';
+import asoLogo from '../assets/img/asociacion.png';
 import laOfiLogo from '../assets/img/laofi.png';
 function Home() {
   return (
