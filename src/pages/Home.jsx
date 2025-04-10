@@ -4,10 +4,10 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Link } from 'react-router-dom';
-import Bin from '../assets/img/bin1.png';
-import AiseLogo from '../assets/img/aise_logo-copia.png';
-import AsoLogo from '../assets/img/aso_logo.png';
-import LaOfiLogo from '../assets/img/laofi.png';
+import bin from '../assets/img/bin1.png';
+import aiseLogo from '../assets/img/aise_logo-copia.png';
+import asoLogo from '../assets/img/aso_logo.png';
+import laOfiLogo from '../assets/img/laofi.png';
 function Home() {
   return (
     <div className="home">
@@ -50,7 +50,7 @@ function Home() {
         >
           <SwiperSlide>
             <img
-              src={Bin}
+              src={bin}
               alt="BIN"
             />
           </SwiperSlide>
@@ -88,19 +88,19 @@ function Home() {
         <div className="logos-grid">
           <a href='#'>
             <img
-              src={AiseLogo}
+              src={aiseLogo}
               alt="Aliado 1 - AISE"
             />
           </a>
           <a href='https://ecuadoremprendedor.odoo.com/' target="_blank">
             <img
-              src={AsoLogo}
+              src={asoLogo}
               alt="Aliado 2 - Asociación Ecuatoriana de Emprendedores"
             />
           </a>
           <a href='https://www.laofi.work/' target="_blank">
             <img
-              src={LaOfiLogo}
+              src={laOfiLogo}
               alt="Aliado 3 - LaOfi"
             />
           </a>
