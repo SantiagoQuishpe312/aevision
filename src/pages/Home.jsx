@@ -4,7 +4,10 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Link } from 'react-router-dom';
-
+import Bin from '../assets/img/bin1.png';
+import AiseLogo from '../assets/img/AISE_LOGO.png';
+import AsoLogo from '../assets/img/ASO_LOGO.png';
+import LaOfiLogo from '../assets/img/LaOfi_Logo.png';
 function Home() {
   return (
     <div className="home">
@@ -47,8 +50,8 @@ function Home() {
         >
           <SwiperSlide>
             <img
-              src="https://cdn-icons-png.flaticon.com/512/3553/3553549.png"
-              alt="Reciclaje de PET"
+              src={Bin}
+              alt="BIN"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -81,32 +84,29 @@ function Home() {
 
       {/* Logos de aliados */}
       <section className="home__logos">
-        <h2>Trabajando con líderes e innovadores</h2>
+        <h2>Partnerships</h2>
         <div className="logos-grid">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/1046/1046755.png"
-            alt="Aliado 1 - Reciclaje"
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/4/42/Google_2015_logo.svg"
-            alt="Aliado 2 - Google"
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Logo_UNESCO.svg"
-            alt="Aliado 3 - UNESCO"
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/5e/World_Wildlife_Fund_logo_2016.svg"
-            alt="Aliado 4 - WWF"
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Apple_logo_black.svg"
-            alt="Aliado 5 - Apple"
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Nike_logo.svg"
-            alt="Aliado 6 - Nike"
-          />
+          <a href='#'>
+            <img
+              src={AiseLogo}
+              alt="Aliado 1 - AISE"
+            />
+          </a>
+          <a href='https://ecuadoremprendedor.odoo.com/' target="_blank">
+            <img
+              src={AsoLogo}
+              alt="Aliado 2 - Asociación Ecuatoriana de Emprendedores"
+            />
+          </a>
+          <a href='https://www.laofi.work/' target="_blank">
+            <img
+              src={LaOfiLogo}
+              alt="Aliado 3 - LaOfi"
+            />
+          </a>
+
+
+
         </div>
 
 

@@ -1,14 +1,16 @@
 import { Link } from 'react-router-dom';
 import './Footer.scss';
-import { Facebook, Instagram, Twitter } from 'lucide-react';
-
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { SiTiktok } from 'react-icons/si'; // <- TikTok icon
+import { FaLink } from 'react-icons/fa';
+import AevisionLogo from '../assets/img/logo.png';
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer__container">
         {/* Logo o nombre */}
         <div className="footer__logo">
-          <h2>AeVision</h2>
+          <img src={AevisionLogo} alt="Logo de AeVision" />
         </div>
 
         {/* Navegación */}
@@ -20,9 +22,14 @@ function Footer() {
 
         {/* Redes sociales */}
         <div className="footer__social">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><Twitter size={20} /></a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
+          <a href="https://www.facebook.com/profile.php?id=61575111474505" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
+          <a href="https://www.linkedin.com/company/ae-vision9/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><Linkedin size={20} /></a>
+          <a href="https://www.tiktok.com/@ae.vision" target="_blank" rel="noopener noreferrer"><SiTiktok size={20} /></a>
+
+          <a href="https://www.instagram.com/ae.vision_/" target="_blank" rel="noopener noreferrer"><Instagram size={20} /></a>
+          <a href="https://linktr.ee/AEVISION" target="_blank" rel="noopener noreferrer">
+            <FaLink size={20} />
+          </a>
         </div>
       </div>
 

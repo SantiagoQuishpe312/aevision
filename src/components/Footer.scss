@@ -22,7 +22,12 @@
     .footer__logo h2 {
       font-size: 1.5rem;
       font-weight: bold;
+      color: #ffffff;
     }
+    .footer__logo img {
+      width: 150px;
+    }
+
   
     .footer__nav {
       list-style: none;
@@ -37,6 +42,7 @@
   
         &:hover {
           text-decoration: underline;
+          color:#FF7335;
         }
       }
     }
@@ -62,4 +68,4 @@
     }
   }
   
-  
+ 
