@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from 'react-icons/fa';
-import './contact.scss'; // O la ruta correspondiente a tu archivo SCSS
+import './Contact.scss'; // O la ruta correspondiente a tu archivo SCSS
 
 const Contact = () => {
   const [formData, setFormData] = useState({ nombre: '', email: '', mensaje: '' });
