@@ -41,7 +41,7 @@ function Navbar() {
       <Link to="/">Inicio</Link>
     </li>
     <li>
-      <Link to="/about">Acerca</Link>
+      <Link to="/about">Sobre nosotros</Link>
     </li>
     <li>
       <Link to="/contact">Contacto</Link>

@@ -2,6 +2,9 @@ import './About.scss';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import aiseLogo from '../assets/img/aise.png';
+import asoLogo from '../assets/img/asociacion.png';
+import laOfiLogo from '../assets/img/laofi.png';
 
 function About() {
   useEffect(() => {
@@ -22,17 +25,28 @@ function About() {
 
       <main className="about__content">
         <section className="about__section" data-aos="fade-up">
-          <p>
-            Ya nos hemos instalado en diferentes ubicaciones por toda Europa y Estados Unidos.
-            Trabaje con nosotros y añada valor a sus operaciones de clasificación de residuos a través de una mayor pureza y producción – obteniendo resultados reveladores.
-          </p>
+          <div className="about__image">
+            <img src="/ruta/a/tu-imagen.jpg" alt="Clasificación de residuos" />
+          </div>
+          <div className="about__text">
+            <h2>Clasificación inteligente de residuos</h2>
+            <p>
+              Ya nos hemos instalado en diferentes ubicaciones por toda Europa y Estados Unidos.
+              Trabaje con nosotros y añada valor a sus operaciones de clasificación de residuos a través de una mayor pureza y producción – obteniendo resultados reveladores.
+            </p>
+          </div>
         </section>
 
-        <section className="about__section" data-aos="fade-up">
-          <h2>Nuestra misión</h2>
-          <p>
-            Ofrecer una recuperación de materiales más rentable gracias a una tecnología de clasificación robusta, fiable y efectiva.
-          </p>
+        <section className="about__section about__mission" data-aos="fade-up">
+          <div className="about__mission-content">
+            <h2>Nuestra misión</h2>
+            <p>
+              Ofrecer una recuperación de materiales más rentable gracias a una tecnología de clasificación robusta, fiable y efectiva.
+            </p>
+            <a href="#contacto" className="btn-mission">
+              Conozca más
+            </a>
+          </div>
         </section>
 
         <section className="about__section" data-aos="fade-up">
@@ -51,12 +65,18 @@ function About() {
         </section>
 
         <section className="about__section" data-aos="fade-up">
-          <h2>Asociaciones con líderes de la industria</h2>
-          <p><strong>FANUC y Recycleye:</strong> Innovamos juntos para ofrecer las mejores soluciones a la clasificación de residuos.</p>
-          <p><strong>Nuestros socios</strong></p>
-          <p><strong>Nuestros inversores</strong></p>
-          <p><strong>Nuestros premios</strong></p>
-          <p><em>¿Quiere explorar cómo la automatización podría optimizar su planta?</em></p>
+          <h2>Partnerships</h2>
+          <div className="logos-grid">
+            <a href="#">
+              <img src={aiseLogo} alt="Aliado 1 - AISE" />
+            </a>
+            <a href="https://ecuadoremprendedor.odoo.com/" target="_blank" rel="noopener noreferrer">
+              <img src={asoLogo} alt="Aliado 2 - Asociación Ecuatoriana de Emprendedores" />
+            </a>
+            <a href="https://www.laofi.work/" target="_blank" rel="noopener noreferrer">
+              <img src={laOfiLogo} alt="Aliado 3 - LaOfi" />
+            </a>
+          </div>
         </section>
       </main>
     </div>
