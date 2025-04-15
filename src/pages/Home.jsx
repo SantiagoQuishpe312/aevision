@@ -15,8 +15,9 @@ function Home() {
       <section className="home__hero">
         <div className="home__overlay">
           <div className="home__hero-content">
-            <h1>Bienvenido a un Futuro Ecológico</h1>
-            <p>Juntos podemos construir un mundo más sostenible 🌱</p>
+            {/* <h1>Bienvenido a un Futuro Ecológico</h1> */}
+            {/* <p>Juntos podemos construir un mundo más sostenible 🌱</p> */}
+            <br /><br />
             <Link to="/dashboards"><button className="home__btn">Descubre nuestro impacto</button></Link>
             <Link to="/donations"><button className="home__btn">Donaciones</button></Link>
 
@@ -54,18 +55,7 @@ function Home() {
               alt="BIN"
             />
           </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/4022/4022065.png"
-              alt="Reciclaje de Papel/Cartón"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/2329/2329853.png"
-              alt="Reciclaje de Aluminio"
-            />
-          </SwiperSlide>
+          
         </Swiper>
       </section>
 
@@ -114,7 +104,7 @@ function Home() {
 
       {/* CTA */}
       <section className="home__cta">
-        <h2>¿Quieres explorar cómo la automatización podría optimizar tu planta?</h2>
+        <h2>¿Quieres explorar cómo la automatización podría mejorar el ambiente?</h2>
         <button className="home__btn">Habla con un experto</button>
       </section>
     </div>

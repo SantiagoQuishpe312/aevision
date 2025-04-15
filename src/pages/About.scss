@@ -4,7 +4,8 @@
   flex-direction: column;
 
   .about__hero {
-    background-image: url('https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=1470&q=80');
+    background-image: url('../assets/img/foto-fondo-equipo.jpg');
+    filter: opacity(0.7);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -38,6 +39,10 @@
     max-width: 1200px;
     margin: 0 auto;
 
+    .text__section {
+      p{
+        color: #ffffff;
+      }}
     .about__section {
       display: flex;
       flex-direction: column;
@@ -47,6 +52,7 @@
       h2{
         color:#FF7335;
       }
+
       @media (min-width: 768px) {
         flex-direction: row;
         align-items: flex-start;
@@ -83,7 +89,8 @@
         p {
           font-size: 1.1rem;
           line-height: 1.7;
-          color: #4a4a4a;
+          color: #ffffff;
+          text-align: justify;
         }
 
         strong {
