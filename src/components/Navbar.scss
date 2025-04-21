@@ -7,7 +7,6 @@
     left: 0;
     width: 100%;
     z-index: 50;
-    padding: 1rem;
     display: flex;
     justify-content: space-between; /* Espacio entre logo y menú */
     align-items: center;
@@ -42,6 +41,7 @@
     align-items: center;
     font-size: 1.25rem;
     font-weight: bold;
+    padding-top: 0.5rem;
   }
   
   .navbar__logo .logo-img {

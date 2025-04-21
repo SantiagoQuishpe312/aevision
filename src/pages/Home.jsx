@@ -88,7 +88,7 @@ function Home() {
           </div>
 
           <div className="ia__text">
-            <h2>"BIN" El Basurero Inteligente que clasifica los residuos con el sonido</h2>
+            <h2>"BIN" El Contenedor Inteligente que clasifica los residuos con el sonido</h2>
             <p>Clasifica los residuos según el sonido que generan al caer. Una experiencia educativa y ecológica en tiempo real.</p>
             <div class="caracteristicas">
               <ul>
@@ -100,18 +100,14 @@ function Home() {
                 <li>✅ Algoritmos de aprendizaje automático para mejorar la precisión</li>
                 <li>✅ Optimización de rutas para la recolección de residuos</li>
                 <li>✅ Visualización de datos de impacto medioambiental en tiempo real</li>
-                <li>✅ Sistema de alertas para mejorar la eficiencia operativa</li>
                 <li>✅ Diagnóstico predictivo para mantenimiento de equipos</li>
                 <li>✅ Análisis de patrones de residuos para mejorar la clasificación</li>
                 <li>✅ Automonitoreo y diagnóstico de errores en sistemas de IA</li>
-                <li>✅ Integración con aplicaciones móviles para seguimiento de residuos</li>
                 <li>✅ Plataformas de análisis para evaluar el impacto ecológico</li>
                 <li>✅ Optimización de recursos energéticos en el proceso de reciclaje</li>
                 <li>✅ Plataforma de capacitación y formación sobre reciclaje inteligente</li>
                 <li>✅ Sistema de evaluación de la huella de carbono de cada material</li>
-                <li>✅ Generación automática de informes y reportes medioambientales</li>
                 <li>✅ Inteligencia artificial para detectar y clasificar residuos peligrosos</li>
-                <li>✅ Soluciones personalizadas según la región o tipo de residuos</li>
                 <li>✅ Plataforma interactiva para involucrar a la comunidad en la gestión de residuos</li>
 
               </ul>
@@ -146,6 +142,12 @@ function Home() {
             />
           </SwiperSlide>
 
+          <SwiperSlide>
+            <img
+              src={fondo2}
+              alt="BIN"
+            />
+          </SwiperSlide>
         </Swiper>
       </section>
       <section className="home__why">
