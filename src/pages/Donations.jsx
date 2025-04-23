@@ -30,13 +30,13 @@ function Donations() {
         <h2>Elige tu Monto de Donación</h2>
 
         <div className="donations__options">
-          <button className="donations__btn">10 USD</button>
-          <button className="donations__btn">50 USD</button>
-          <button className="donations__btn">100 USD</button>
+          <button className="donations__btn" onClick={openModal}>10 USD</button>
+          <button className="donations__btn" onClick={openModal}>50 USD</button>
+          <button className="donations__btn" onClick={openModal}>100 USD</button>
         </div>
 
         <p>O ingresa el monto que deseas donar:</p>
-        <input type="number" placeholder="Monto en USD" className="donations__input" />
+        <input type="number" placeholder="Monto en USD" className="donations__input" min={2}/>
 
         <div className="donations__cta">
         <button className="donations__cta-btn" onClick={openModal}>

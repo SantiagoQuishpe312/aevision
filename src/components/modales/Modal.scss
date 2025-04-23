@@ -19,6 +19,16 @@
     width: 300px;
     text-align: center;
     color: black;
+
+    img{
+      margin: 20px;
+      width: 200px;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0; /* Opcional: elimina la sangría por defecto */
+    }
+    
   }
   
   .modal-close-btn {
