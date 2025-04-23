@@ -15,8 +15,9 @@ import fondo2 from '../assets/img/fondo2.png';
 import fondo3 from '../assets/img/fondo3.png';
 import fondo4 from '../assets/img/fondo4.png';
 import fondo5 from '../assets/img/fondo5.png';
+import fondo6 from '../assets/img/fondo6.png';
 const imagenes = [fondo1, fondo2,
-  fondo3, fondo4, fondo5
+  fondo3, fondo4, fondo5,fondo6
 ];
 import logo from '../assets/img/logo.png';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -30,7 +31,7 @@ function Home() {
     const intervalo = setInterval(() => {
       index = (index + 1) % imagenes.length;
       setImagenActual(imagenes[index]);
-    }, 5000); // cambia cada 5 segundos
+    }, 4000); // cambia cada 5 segundos
 
 
 
@@ -47,18 +48,16 @@ function Home() {
       <section className="home__hero" style={{ backgroundImage: `url(${imagenActual})` }}>
         <div className="home__overlay">
           <div className="home__hero-content" >
-            <br /><br /><br /> <br /> <h1>Bienvenido a un Futuro Ecológico</h1>
-            <p className='centrado__fondo1'> Fusionamos la
-              tecnología de vanguardia con compromiso
-              medioambiental, desarrollamos productos y
-              experiencias que educan y empoderan a las
-              personas hacia un futuro más sostenible. </p>
-
+            <p className='centrado__fondo1'>Tecnología que piensa por ti... y actúa por el planeta.</p>
             <Link to="/dashboards"><button className="home__btn">Descubre nuestro impacto</button></Link>
             <Link to="/donations"><button className="home__btn">Donaciones</button></Link>
 
           </div>
         </div>
+        <div className="home__hero-celular" >
+            <Link to="/dashboards"><button className="home__btn2">Nuestro impacto</button></Link>
+            <Link to="/donations"><button className="home__btn2">Donaciones</button></Link>
+          </div>
       </section>
 
       {/* Rentabilidad */}
@@ -221,7 +220,7 @@ function Home() {
       {/* CTA */}
       <section className="home__cta">
         <h2>¿Quieres explorar cómo la automatización podría mejorar el ambiente?</h2>
-        <a href="https://wa.me/593963089846" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/593990533966" target="_blank" rel="noopener noreferrer">
   <button className="home__btn">Habla con un experto</button>
 </a>
 

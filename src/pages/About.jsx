@@ -18,8 +18,9 @@ function About() {
         <div className="about__hero-content" data-aos="fade-up">
           <h1>Convertir los residuos del mundo en recursos</h1>
           <p>
-            Tradicionalmente, el coste de clasificar los recursos preciosos ha sido mayor que el valor obtenido de venderlos.
-            Esto cambia hoy en día, gracias a la tecnología innovadora, basada en datos, que realiza la tarea de clasificar flujos de residuos – de forma más rápida, más inteligente y más fiable.
+          Somos un equipo multidisciplinario de jóvenes emprendedores comprometidos con el desarrollo de tecnologías para la protección del medio ambiente. 
+
+Nuestra misión es generar conciencia ambiental y transformar los desechos sólidos en oportunidades económicas sostenibles.
           </p>
         </div>
       </header>
