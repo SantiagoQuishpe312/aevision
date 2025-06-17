@@ -11,14 +11,23 @@
     justify-content: space-between; /* Espacio entre logo y menú */
     align-items: center;
     background-color: transparent; /* Transparente inicialmente */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, top 0.3s ease; /* Animación de transición */
     
   }
   
   .navbar.scrolled {
     background-color:  #2F2F2F; /* Cambiar fondo cuando se hace scroll */
     opacity: 0.9; /* Ajustar la opacidad cuando se hace scroll */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra cuando se hace scroll */
+    box-shadow: 0 2px 8px rgba(250, 150, 103, 0.89); /* Sombra cuando se hace scroll */
+    top:-12px;
+      height: 10%;
+
+  }
+
+  .navbar.scrolled .navbar__container .navbar__logo .logo-img{
+    width: 90px;
+    position: absolute;
+    margin-bottom: 10px;
   }
   
   /* Contenedor del navbar */
