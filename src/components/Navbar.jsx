@@ -1,67 +1,59 @@
-import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import './Navbar.scss';
+// src/components/Navbar.jsx
+import { useEffect, useState } from 'react';
+import './Navbar.scss'; // Asegúrate de tener el CSS en este archivo
+import Logo from '../assets/img/logo.png'
+export default function Navbar() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [scrollPos, setScrollPos] = useState(0);
+  const [hidden, setHidden] = useState(false);
 
-import logo from '../assets/img/logo.png'; // Asegúrate de importar la imagen
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
+  const closeSidebar = () => setSidebarOpen(false);
 
-function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  // Detectar el scroll y cambiar el estado de "scrolled"
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true); // Se hace scroll más de 50px
+      const currentScroll = window.scrollY;
+      if (currentScroll > scrollPos && currentScroll > 50) {
+        setHidden(true); // Ocultar navbar
       } else {
-        setScrolled(false); // No se hace scroll
+        setHidden(false); // Mostrar navbar
       }
+      setScrollPos(currentScroll);
     };
-
     window.addEventListener('scroll', handleScroll);
-
-    // Limpieza del evento al desmontar el componente
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [scrollPos]);
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="navbar__container">
-  {/* Logo */}
-  <h1 className="navbar__logo">
-    <Link to="/">
-      <img src={logo} alt="Logo" className="logo-img" />
-    </Link>
-  </h1>
+   <header className={`navbar ${hidden ? 'hidden' : ''}`}>
+  <div className="navbar-container">
+    <button className="menu-toggle" onClick={toggleSidebar}>☰</button>
 
-  {/* Menú de navegación */}
-  <ul className={`navbar__menu ${menuOpen ? 'open' : ''}`}>
-    <li>
-      <Link to="/">Inicio</Link>
-    </li>
-    <li>
-      <Link to="/about">Sobre nosotros</Link>
-    </li>
-    <li>
-      <Link to="/contact">Contacto</Link>
-    </li>
-    <li>
-      <Link to="/donations">Donaciones</Link>
-    </li>
-  </ul>
+    <div className="logo-wrapper">
+      <img src={Logo} alt="Logo" className="logo" />
+    </div>
 
-  {/* Menú hamburguesa */}
-  <div
-    className="navbar__hamburger"
-    onClick={() => setMenuOpen(!menuOpen)}
-  >
-    {menuOpen ? <X size={24} /> : <Menu size={24} />}
-  </div>
-</div>
+    <div className="right-icons">
+      <a href="mailto:contacto@empresa.com" className="mail-icon" title="Contáctanos">
+        📧
+      </a>
+    </div>
 
+    <nav className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+      <button className="close-btn" onClick={closeSidebar}>✖</button>
+      <ul className="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Puertas Abiertas</a></li>
+        <li><a href="#">Receta del Futuro</a></li>
+        <li><a href="#">Relación con Inversores</a></li>
+        <li><a href="#">Prensa</a></li>
+        <li><a href="#">Transformación Digital</a></li>
+        <li><a href="#">Franquicias</a></li>
+        <li><a href="#">Contáctanos</a></li>
+      </ul>
     </nav>
+  </div>
+</header>
+
   );
 }
-
-export default Navbar;

@@ -1,121 +1,86 @@
-/* Navbar.scss */
+/* src/components/Navbar.css */
 
-/* Estilo general para el navbar */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 50;
-    display: flex;
-    justify-content: space-between; /* Espacio entre logo y menú */
-    align-items: center;
-    background-color: transparent; /* Transparente inicialmente */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, top 0.3s ease; /* Animación de transición */
-    
-  }
-  
-  .navbar.scrolled {
-    background-color:  #2F2F2F; /* Cambiar fondo cuando se hace scroll */
-    opacity: 0.9; /* Ajustar la opacidad cuando se hace scroll */
-    box-shadow: 0 2px 8px rgba(250, 150, 103, 0.89); /* Sombra cuando se hace scroll */
-    top:-12px;
-      height: 10%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: top 0.3s;
+}
 
-  }
+.navbar.hidden {
+  top: -100px;
+}
 
-  .navbar.scrolled .navbar__container .navbar__logo .logo-img{
-    width: 90px;
-    position: absolute;
-    margin-bottom: 10px;
-  }
-  
-  /* Contenedor del navbar */
-  .navbar__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    box-sizing: border-box;
-    position: relative;
-  }
-  
-  
-  /* Estilo para el logo */
-  .navbar__logo {
-    display: flex;
-    align-items: center;
-    font-size: 1.25rem;
-    font-weight: bold;
-    padding-top: 0.5rem;
-  }
-  
-  .navbar__logo .logo-img {
-    width: 120px; /* Ajusta el tamaño del logo */
-    height: auto;
-    margin-right: 1rem; /* Espacio a la derecha del logo */
-  }
-  
-  /* Estilo para el menú */
-  .navbar__menu {
-    display: flex;
-    gap: 1.5rem; /* Espaciado entre los elementos del menú */
-  }
-  
-  .navbar__menu li {
-    list-style: none;
-  }
-  
-  .navbar__menu li a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar__menu li a:hover {
-    color: #FF7335;
-  }
-  
-  /* Estilos para el menú hamburguesa */
-  .navbar__hamburger {
-    display: none;
-    cursor: pointer;
-    margin-left: auto;
-  }
-  
-  
-  .navbar__hamburger.open {
-    display: block;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar__menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color:  #2F2F2F ;
-      opacity: 0.9;
-      padding: 1rem;
-      gap: 1rem;
-      z-index: 40;
-    }
-  
-    .navbar__menu.open {
-      display: flex;
-    }
-  
-    .navbar__hamburger {
-      display: block;
-    }
-  
-    .navbar__menu li {
-      text-align: left;
-    }
-  }
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+}
+
+.logo-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo {
+  width: 200px;
+}
+
+.menu-toggle,
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 260px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease-in-out;
+  padding: 1rem;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 2rem 0;
+}
+
+.nav-links li {
+  padding: 0.75rem 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+
+.right-icons {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mail-icon {
+  text-decoration: none;
+  color: #333;
+  font-size: 32px;
+}

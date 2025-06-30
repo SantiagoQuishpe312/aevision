@@ -21,6 +21,7 @@ const imagenes = [fondo1, fondo2,
 ];
 import logo from '../assets/img/logo.png';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import SeccionPrincipal from '../components/SeccionPrincipal';
 
 function Home() {
 
@@ -45,20 +46,7 @@ function Home() {
   return (
     <div className="home">
       {/* Hero */}
-      <section className="home__hero" style={{ backgroundImage: `url(${imagenActual})` }}>
-        <div className="home__overlay">
-          <div className="home__hero-content" >
-            <p className='centrado__fondo1'>Tecnología que piensa por ti... y actúa por el planeta.</p>
-            <Link to="/dashboards"><button className="home__btn">Descubre nuestro impacto</button></Link>
-            <Link to="/donations"><button className="home__btn">Donaciones</button></Link>
-
-          </div>
-        </div>
-        <div className="home__hero-celular" >
-            <Link to="/dashboards"><button className="home__btn2">Nuestro impacto</button></Link>
-            <Link to="/donations"><button className="home__btn2">Donaciones</button></Link>
-          </div>
-      </section>
+      <SeccionPrincipal/>
 
       {/* Rentabilidad */}
       <section className="home__rentabilidad">
